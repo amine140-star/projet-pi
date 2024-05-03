@@ -1,0 +1,30 @@
+/* Couleur gris clair légèrement foncée */
+.btn-custom-light {
+    background-color: #a88585;
+    color: #695555; /* Couleur du texte */
+}
+
+/* Style pour les icônes */
+.btn-like-dislike i {
+    font-size: 1.2rem; /* Ajustez la taille des icônes selon vos préférences */
+}
+
+
+
+/* Nouvelle couleur pour le bouton Like */
+.btn-custom-like {
+    background-color: #28a745; /* Couleur verte */
+    color: #fff; /* Couleur du texte */
+}
+
+/* Si nécessaire, ajustez d'autres styles pour le bouton Like */
+.btn-custom-like:hover {
+    background-color: #218838; /* Couleur verte légèrement plus foncée au survol */
+    color: #fff; /* Couleur du texte au survol */
+    border-color: #218838; /* Couleur de la bordure au survol */
+}
+
+
+
+  
+  

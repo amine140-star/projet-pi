@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Modifier Actualité</h2>
+  <form (ngSubmit)="updateActualite()">
+    <div class="form-group">
+      <label class="col-form-label" for="titre">Titre :</label>
+      <input type="text" class="form-control" id="titre" name="titre" [(ngModel)]="actualite.titre" required>
+    </div>
+    <div class="form-group">
+      <label class="col-form-label" for="contenu">Contenu :</label>
+      <textarea class="form-control" id="contenu" name="contenu" [(ngModel)]="actualite.contenu" required></textarea>
+    </div>
+    <div class="form-group">
+      <label class="col-form-label" for="auteur">Auteur :</label>
+      <input type="text" class="form-control" id="auteur" name="auteur" [(ngModel)]="actualite.auteur" required>
+    </div>
+    <!-- Ajoutez un champ pour la date de publication -->
+    <div class="form-group">
+      <label class="col-form-label" for="datePublication">Date de publication :</label>
+      <input type="datetime-local" class="form-control" id="datePublication" name="datePublication" [(ngModel)]="actualite.datePublication" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+  </form>
+</div>

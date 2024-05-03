@@ -1,0 +1,36 @@
+<h2>Actualités</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let actualite of actualites">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ actualite.titre }}</h5>
+          <p class="card-text">{{ actualite.contenu }}</p>
+          <p class="card-text">Auteur: {{ actualite.auteur }}</p>
+          <p class="card-text">Date de publication: {{ actualite.datePublication | date:'yyyy-MM-dd HH:mm:ss' }}</p>
+          <!-- Bouton "Ajouter un commentaire" avec une meilleure apparence en gris moyen -->
+          <button class="btn btn-secondary btn-lg" (click)="ajouterCommentaire(actualite)">Ajouter un commentaire</button>
+          <hr>
+          <h5>Commentaires</h5>
+          <div class="card" *ngFor="let commentaire of commentaires">
+            <div class="card-body">
+              <p class="card-text">{{ commentaire.contenu }}</p>
+              <!-- Utilisez des classes Bootstrap pour les boutons et des classes Font Awesome pour les icônes -->
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-outline-dark mr-2 btn-like-dislike" (click)="likeCommentaire(commentaire.id)">
+                  Like <!-- Texte "Like" dans le bouton -->
+                  <i class="fas fa-arrow-alt-circle-up"></i> <!-- Icône de flèche vers le haut pour "Like" -->
+                </button>  
+                <button class="btn btn-outline-danger btn-like-dislike" (click)="dislikeCommentaire(commentaire.id)">
+                  Dislike <!-- Texte "Dislike" dans le bouton -->
+                  <i class="fas fa-arrow-alt-circle-down"></i> <!-- Icône de flèche vers le bas pour "Dislike" -->
+                </button>
+              </div>
+            </div>
+          </div>               
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

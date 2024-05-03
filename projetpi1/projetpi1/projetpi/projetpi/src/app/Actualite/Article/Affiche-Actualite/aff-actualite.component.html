@@ -1,0 +1,29 @@
+
+<h2>Liste des Actualités</h2>
+
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Titre</th>
+      <th scope="col">Contenu</th>
+      <th scope="col">Auteur</th>
+      <th scope="col">Date de publication</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let actualite of actualites">
+      <td>{{ actualite.titre }}</td>
+      <td>{{ actualite.contenu }}</td>
+      <td>{{ actualite.auteur }}</td>
+      <td>{{ actualite.datePublication | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+      <td>
+        <button class="btn btn-primary" style="margin-right: 10px" (click)="editActualite(actualite)">Modifier</button>
+        <button class="btn btn-danger" (click)="deleteActualite(actualite)">Supprimer</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
